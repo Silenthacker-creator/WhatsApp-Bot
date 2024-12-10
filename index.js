@@ -123,4 +123,4 @@ const connectToWhatsApp = async () => {
 connectToWhatsApp(+254736001921)
 };
 
-connect()
+connect(okay)
