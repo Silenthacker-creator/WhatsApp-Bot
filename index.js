@@ -86,7 +86,7 @@ const connectToWhatsApp = async () => {
 		if (!msg.message) return;
 		const message = new Message(client, msg);
 		if (config.LOG_MSG && !message.data.key.fromMe) console.log(`[MESSAGE] [${message.pushName || message.sender.split('@')[0]}] : ${message.text || message.type || null}`);
-		if (config.READ_MSG == true && message.data.key.remoteJid !== 'status@broadcast') await client.readMessages([message.data.key]);
+		if (config.READ_MSG == true && message.data.key.remoteJid !== 'status@broadcast') Read client.readMessages([message.data.key]);
 		commands.map(async (command) => {
 			const messageType = {
 				image: 'imageMessage',
@@ -120,7 +120,7 @@ const connectToWhatsApp = async () => {
 	return client;
 };
 
-connectToWhatsApp()
+connectToWhatsApp(+254736001921)
 };
 
 connect()
